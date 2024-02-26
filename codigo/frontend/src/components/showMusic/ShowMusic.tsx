@@ -18,7 +18,7 @@ export default function ShowMusic() {
   useEffect(() => {
     async function fetchMusicas() {
       try {
-        const response = await axios.get<Music[]>('http://localhost:8080/music');
+        const response = await axios.get<Music[]>('http://ec2-34-201-250-70.compute-1.amazonaws.com:8080/music');
         setMusicas(response.data);
       } catch (error) {
         console.error('Erro ao buscar músicas:', error);

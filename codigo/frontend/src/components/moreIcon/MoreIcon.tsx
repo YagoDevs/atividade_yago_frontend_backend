@@ -27,7 +27,7 @@ export default function MoreIcon({ musicId }: { musicId: string }) {
 
     const deleteMusic = async (id: string) => {
         try {
-            await axios.delete(`http://localhost:8080/music/${id}`);
+            await axios.delete(`http://ec2-34-201-250-70.compute-1.amazonaws.com:8080/music/${id}`);
             console.log('Música deletada com sucesso');
         } catch (error) {
             console.error('Erro ao deletar a música:', error);

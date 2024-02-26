@@ -29,7 +29,7 @@ export default function ButtonAdd() {
         };
 
         try {
-            const response = await axios.post('http://localhost:8080/music', data);
+            const response = await axios.post('http://ec2-34-201-250-70.compute-1.amazonaws.com:8080/music', data);
             console.log('Música criada:', response.data);
             closeModal(); 
         } catch (error) {

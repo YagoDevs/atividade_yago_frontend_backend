@@ -23,7 +23,7 @@ export default function UpdateModal({ open, handleClose, musicId }: UpdateModalP
         };
 
         try {
-            const response = await axios.put(`http://localhost:8080/music/${musicId}`, data); 
+            const response = await axios.put(`http://ec2-34-201-250-70.compute-1.amazonaws.com:8080/music/${musicId}`, data); 
             console.log('Música atualizada:', response.data);
             handleClose();
         } catch (error) {
